@@ -1,0 +1,25 @@
+<mat-accordion *ngFor="let module of MyModules">
+  <mat-expansion-panel [expanded]="true" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+          <label>Module Name</label>
+        <h3> {{ module.name }} </h3>
+      </mat-panel-title>
+      <mat-panel-description>
+          <label>Lecturer</label>
+        <h3>{{ module.lecturer }}</h3>
+      </mat-panel-description>
+      <mat-panel-description>
+          <label>Module Name</label>
+        <h3> {{ module.duration }} </h3>
+      </mat-panel-description>
+      <mat-panel-description>
+        <h3> {{ module.worthCredits }} </h3>
+      </mat-panel-description>
+    </mat-expansion-panel-header> 
+    <mat-action-row>
+      <button mat-button [routerLink]="['/modulesEdit', module._id]" color="primary">EDIT</button>
+      <button mat-button (click)="onDelete(module._id)" color="warn">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,26 @@
+<mat-accordion *ngFor="let todo of MyToDo">
+  <mat-expansion-panel [expanded]="true" >
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+          <label>Task Name</label>
+        <h3> {{ todo.name }} </h3>
+      </mat-panel-title>
+      <mat-panel-description>
+          <label>Module</label>
+        <h3>{{ todo.moduleName }}</h3>
+      </mat-panel-description>
+      <mat-panel-description>
+          <label>Due Date</label>
+        <h3> {{ todo.dueDate }} </h3>
+      </mat-panel-description>
+      <mat-panel-description>
+          <label>Percentage</label>
+        <h3> {{ todo.worthPercentage }} </h3>
+      </mat-panel-description>
+    </mat-expansion-panel-header> 
+    <mat-action-row>
+      <button mat-button [routerLink]="['/todoEdit', todo._id]" color="primary">EDIT</button>
+      <button mat-button (click)="onDeleteTodo(todo._id)" color="warn">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

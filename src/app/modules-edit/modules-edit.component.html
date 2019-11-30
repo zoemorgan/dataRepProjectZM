@@ -1,0 +1,47 @@
+<mat-card>
+  <form (submit)="onEditModule(moduleForm)" #moduleForm="ngForm">
+    <mat-form-field>
+        <label> Module Name</label>
+        <input
+          matInput
+          type="text"
+          name="name"
+          ngModel={{module.name}}
+          required
+          #name="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+        <label>Lecturer</label>
+      <textarea
+        matInput
+        name="lecturer"
+        ngModel={{module.lecturer}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <label>Module Duration</label>
+      <textarea
+        matInput
+       rows="4"
+        name="duration"
+        ngModel={{module.duration}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <label>Credits Worth</label>
+    <textarea
+      matInput
+     rows="4"
+      name="worthCredits"
+      ngModel={{module.worthCredits}}
+      required
+      #content="ngModel"></textarea>
+  </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Edit Movie</button>
+  </form>
+</mat-card>

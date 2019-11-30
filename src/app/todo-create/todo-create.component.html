@@ -1,0 +1,43 @@
+<mat-card>
+  <form (submit)="onAddToDo(todoForm)" #todoForm="ngForm">
+    <mat-form-field>
+        <mat-label> Task Name</mat-label>
+      <input
+        matInput
+        type="text"
+        name="name"
+        ngModel
+        required
+        #name="ngModel">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Module</mat-label>
+      <mat-select [(value)]="moduleName">
+        <mat-option *ngFor="let module of MyModules" [value]="module.name">{{module.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Due Date</mat-label>
+        <textarea
+        matInput
+        name="dueDate"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Percentage Worth</mat-label>
+    <textarea
+      matInput
+      rows="4"
+      name="worthPercentage"
+      ngModel
+      required
+      #content="ngModel"></textarea>
+  </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save Task</button>
+  </form>
+</mat-card>

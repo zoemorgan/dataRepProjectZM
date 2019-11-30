@@ -1,0 +1,15 @@
+<mat-toolbar color="primary"> 
+  <mat-toolbar-row>
+          <span class="title-center">
+      Modules
+  </span>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+<button mat-button [routerLink]="['/modulesCreate']" color="Warn">Add Module</button>
+<button mat-button [routerLink]="['/modulesRead']">Display Modules</button>
+<button mat-button [routerLink]="['/todoCreate']" color="Warn">Add to To-Do List</button>
+<button mat-button [routerLink]="['/todoRead']">Display To-Do List</button>
+</mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
