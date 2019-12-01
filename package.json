@@ -27,6 +27,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.7.12",
+    "ng2-search-filter": "^0.5.1",
+    "ngx-twitter-timeline": "^0.1.5",
     "rxjs": "~6.5.3",
     "zone.js": "~0.9.1"
   },

@@ -1,4 +1,4 @@
-
+<!--form to gather information on the task you wish to add to the database-->
 <div class="createForm">
 <mat-card>
   <form (submit)="onAddToDo(todoForm)" #todoForm="ngForm">
@@ -11,12 +11,18 @@
       required
       #content="ngModel"></textarea>
   </mat-form-field>
+
+  <!--Drop down to select a module, values are pulled from the database so only modules that have been 
+    entered can be selected. Values display, but gets undefined when form is submitted-->
+
    <!-- <mat-form-field>
       <mat-label>Module</mat-label>
       <mat-select [(value)]="moduleName">
         <mat-option *ngFor="let module of MyModules" [value]="module.name">{{module.name}}</mat-option>
       </mat-select>
     </mat-form-field>-->
+    
+    <!--added textarea in place of the drop down-->
     <mat-form-field>
       <mat-label>Module</mat-label>
       <textarea

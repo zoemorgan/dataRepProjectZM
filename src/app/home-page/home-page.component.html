@@ -6,4 +6,12 @@
   <img src="../assets/bookImg.png" id="bookImg">
   <h4 id="info">Add your modules to the module list to keep track of them. You can then add tasks to your to-do list. These can then be searched through according to module, allowing you to keep track of what is due for each individual module.</h4>
   </div>
+  <!--display GMITs Twitter feed on the home page-->
+  <div class="twitterFeed">
+      <h2>Follow GMIT on Twitter</h2>
+      <ngx-twitter-timeline 
+      [data]="{sourceType: 'url', url: 'https://twitter.com/GMITOfficial'}"
+      [opts]="{tweetLimit: 3,theme:'dark'}"
+  ></ngx-twitter-timeline>
+  </div>
 </div>

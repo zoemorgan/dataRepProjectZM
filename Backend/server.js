@@ -77,6 +77,19 @@ app.get('/api/todo/:id',(req,res)=>{
   })
 });
 
+/*search tasks by module
+app.get('/api/todo/search/:moduleName/:criteria', (req,res)=>{
+  console.log(req.params.moduleName);
+  console.log(req.params.criteria);
+    if(req.params.criteria == 'moduleName')
+    {
+      TodoModel.find({ 'moduleName': req.params.moduleName},
+    (error,data) =>{
+      res.json(data);
+    })
+    }
+})*/
+
 //delete module by id
 app.delete('/api/modules/:id', (req,res) =>{
     console.log(req.params.id);

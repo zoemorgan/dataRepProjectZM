@@ -1,4 +1,11 @@
-<mat-accordion *ngFor="let todo of MyToDo">
+<!--all information is getted from the database and displayed on this page using ngFor to create an instance 
+  of the below HTML for each task in the database-->
+  <div class="search-module">
+      <mat-label>Search </mat-label>
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchModule" autocomplete="off" 
+      placeholder="Start searching">
+  </div>
+<mat-accordion *ngFor="let todo of MyToDo| filter:searchModule">
   <mat-expansion-panel [expanded]="true" >
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -8,7 +15,7 @@
     </mat-expansion-panel-header>
       <mat-panel-description>
         <mat-label>Module</mat-label>
-        <h3>{{ todo.moduleName }}</h3>
+        <h3>{{ todo.moduleName }}</h3> 
       </mat-panel-description>
       <mat-panel-description>
           <mat-label>Due Date</mat-label>

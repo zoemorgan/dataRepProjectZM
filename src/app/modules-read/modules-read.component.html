@@ -1,3 +1,5 @@
+<!--information is taken from the database and displayed on the page, using ngFor to create an instance of
+the html below for each set in the db-->
 <mat-accordion *ngFor="let module of MyModules">
   <mat-expansion-panel [expanded]="true" >
     <mat-expansion-panel-header>
@@ -11,7 +13,7 @@
         <h3>{{ module.lecturer }}</h3>
       </mat-panel-description>
       <mat-panel-description>
-          <mat-label>Module Name</mat-label>
+          <mat-label>Duration</mat-label>
         <h3> {{ module.duration }} </h3>
       </mat-panel-description>
       <mat-panel-description>

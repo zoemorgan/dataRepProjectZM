@@ -1,11 +1,14 @@
 <mat-toolbar color="primary"> 
   <mat-toolbar-row>
+    <!--div to help with styling-->
     <div class="title">
       Modules & Task Manager
     </div>
     </mat-toolbar-row>
     <mat-toolbar-row>
+<!--div to help with styling-->
 <div class="navBarButtons">
+  <!--buttons which use router link to load components as set up in app-routing.module.ts-->
   <button mat-raised-button [routerLink]="['']">Home</button>
   <button mat-raised-button [routerLink]="['/modulesCreate']">Add Module</button>
   <button mat-raised-button [routerLink]="['/modulesRead']">Display Modules</button>

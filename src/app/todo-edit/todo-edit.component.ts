@@ -15,6 +15,7 @@ export class TodoEditComponent implements OnInit {
     private route:ActivatedRoute) { }
 
   ngOnInit() {
+    //get the information from the db by passing the id to the todo service which sends a get request to the server
     this.todoService.GetTodo(this.route.snapshot.params['id']).subscribe(
       (data) =>{
           this.todo = data;
@@ -25,6 +26,8 @@ export class TodoEditComponent implements OnInit {
 
   onEditToDo(form:NgForm){
     console.log(form.value.name);
+    //values gethered from the form are passed to the todo service and then onto the server where the 
+    //task will be updated in the db
     this.todoService.UpdateToDo(this.todo._id, form.value.name,
       form.value.moduleName, form.value.dueDate, form.value.worthPercentage).subscribe();
   }

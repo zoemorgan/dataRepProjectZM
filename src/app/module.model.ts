@@ -1,3 +1,4 @@
+//model for modules
 export interface Module {
     name: string;
     lecturer: string;

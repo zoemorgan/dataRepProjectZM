@@ -12,6 +12,7 @@ export class ModulesReadComponent implements OnInit {
   constructor(private moduleService: ModuleServiceService) { }
 
   ngOnInit() {
+    //get all information from the database through the module service and store it in the MyModules variable
     this.moduleService.GetModuleInformation().subscribe((data) => {
       this.MyModules = data.modules;
       console.log(this.MyModules);
@@ -20,6 +21,8 @@ export class ModulesReadComponent implements OnInit {
 
   onDelete(id:String){
     console.log("Deleting movie with id: "+id);
+    //pass the id of the selected module to the module service delete function where it
+    // will be removed from the db, page is reloaded once the module is deleted
     this.moduleService.DeleteModule(id).subscribe(
       ()=>{
         this.ngOnInit();

@@ -1,16 +1,14 @@
+/*center title and change color*/
 .title {
     margin: auto;
     color: rgb(0, 204, 204);
 }
-
+/*center buttons in div with class navBarButtons*/
 .navBarButtons{
     margin: auto;
 }
 
+/*add a 2% margin to the toolbar so nothing is right against it*/
 mat-toolbar {
     margin-bottom: 2%;
-}
-
-button:hover {
-    background-color: rgb(102, 0, 51);
 }

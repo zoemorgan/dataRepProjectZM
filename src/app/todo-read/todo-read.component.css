@@ -1,6 +1,19 @@
 mat-expansion-panel, textarea{
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 2%;
 }
+
+.search-module{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+
+h3{
+    text-align: center;
+    margin: auto;
+  }

@@ -15,7 +15,7 @@ export class TodoCreateComponent implements OnInit {
   MyModules: any =[];
 
   ngOnInit() {
-    //get module information from DB to be used in module select drop down
+    //get module information from DB to be used in module select drop down and store in MyModules variable
     this.moduleService.GetModuleInformation().subscribe((data) => {
       this.MyModules = data.modules;
       console.log(this.MyModules);
@@ -24,6 +24,7 @@ export class TodoCreateComponent implements OnInit {
 
   onAddToDo(form: NgForm) {
     
+    //if form is not valid it will not be submitted
     if(!form.valid)
     {
       return;
@@ -31,6 +32,7 @@ export class TodoCreateComponent implements OnInit {
 
     console.log(form.value.moduleName);
 
+    //values from the form are passed to the todo service where they will be passed tot he server and added to the db
     this.todoService.AddToDoInformation(form.value.name,
       form.value.moduleName, form.value.dueDate, form.value.worthPercentage).subscribe(
         ()=>{
