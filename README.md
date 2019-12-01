@@ -5,3 +5,6 @@ For my project i created a college modules and tasks manager. The application al
 
 The user can also store information regarding any tasks they have upcoming. You can enter the name of the task, when t is due, the module it is from and what percentage it is worth. Originally i had planned to have a drop down bar, which uses the information stored about modules to populate it, limitting the user to only adding tasks for modules they had already created. The name of the module is pulled from the database and displayed in the drop down, however once the form is submitted undefined is sent for that field. In order to get around this i changed it to a regulat text field and commented out the drop down.The user can also display all tasks they have added to their to-do list. From here they can search through them, delete any tasks from the list or edit the values they had previously entered.
 
+## App in Use
+
+![Home Page](/appInUseImages/homePage.JPG)
