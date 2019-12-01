@@ -7,4 +7,18 @@ The user can also store information regarding any tasks they have upcoming. You 
 
 ## App in Use
 
-![Home Page](/appInUseImages/homePage.JPG)
+![Home Page](/appInUseImages/homepage.JPG)
+
+![Add Module Page](/appInUseImages/addModule.JPG)
+
+![Display Module Page](/appInUseImages/displayModules.JPG)
+
+![Edit Module Page](/appInUseImages/editModule.JPG)
+
+![Add To-Do Page](/appInUseImages/addToDO.JPG)
+
+![Display To-Do Page](/appInUseImages/displayToDo.JPG)
+
+![Search ToDo](/appInUseImages/searchToDo.JPG)
+
+![Edit ToDo Page](/appInUseImages/editToDo.JPG)
