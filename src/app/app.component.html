@@ -1,14 +1,17 @@
 <mat-toolbar color="primary"> 
   <mat-toolbar-row>
-          <span class="title-center">
-      Modules
-  </span>
+    <div class="title">
+      Modules & Task Manager
+    </div>
     </mat-toolbar-row>
     <mat-toolbar-row>
-<button mat-button [routerLink]="['/modulesCreate']" color="Warn">Add Module</button>
-<button mat-button [routerLink]="['/modulesRead']">Display Modules</button>
-<button mat-button [routerLink]="['/todoCreate']" color="Warn">Add to To-Do List</button>
-<button mat-button [routerLink]="['/todoRead']">Display To-Do List</button>
+<div class="navBarButtons">
+  <button mat-raised-button [routerLink]="['']">Home</button>
+  <button mat-raised-button [routerLink]="['/modulesCreate']">Add Module</button>
+  <button mat-raised-button [routerLink]="['/modulesRead']">Display Modules</button>
+  <button mat-raised-button [routerLink]="['/todoCreate']">Add to To-Do List</button>
+  <button mat-raised-button [routerLink]="['/todoRead']">Display To-Do List</button>
+</div>
 </mat-toolbar-row>
 </mat-toolbar>
 

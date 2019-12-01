@@ -2,25 +2,26 @@
   <mat-expansion-panel [expanded]="true" >
     <mat-expansion-panel-header>
       <mat-panel-title>
-          <label>Task Name</label>
+        <mat-label>Task Name</mat-label>
         <h3> {{ todo.name }} </h3>
       </mat-panel-title>
+    </mat-expansion-panel-header>
       <mat-panel-description>
-          <label>Module</label>
+        <mat-label>Module</mat-label>
         <h3>{{ todo.moduleName }}</h3>
       </mat-panel-description>
       <mat-panel-description>
-          <label>Due Date</label>
+          <mat-label>Due Date</mat-label>
         <h3> {{ todo.dueDate }} </h3>
       </mat-panel-description>
       <mat-panel-description>
-          <label>Percentage</label>
+          <mat-label>Percentage</mat-label>
         <h3> {{ todo.worthPercentage }} </h3>
       </mat-panel-description>
-    </mat-expansion-panel-header> 
+    
     <mat-action-row>
-      <button mat-button [routerLink]="['/todoEdit', todo._id]" color="primary">EDIT</button>
-      <button mat-button (click)="onDeleteTodo(todo._id)" color="warn">DELETE</button>
+      <button mat-raised-button [routerLink]="['/todoEdit', todo._id]" >EDIT</button>
+      <button mat-raised-button (click)="onDeleteTodo(todo._id)" >DELETE</button>
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>

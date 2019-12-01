@@ -1,17 +1,17 @@
+<div class="createModuleForm">
 <mat-card>
   <form (submit)="onAddModule(moduleForm)" #moduleForm="ngForm">
     <mat-form-field>
-        <label> Module Name</label>
-      <input
-        matInput
-        type="text"
-        name="name"
-        ngModel
-        required
-        #title="ngModel">
-    </mat-form-field>
+      <mat-label>Module Name</mat-label>
+    <textarea
+      matInput
+      name="name"
+      ngModel
+      required
+      #content="ngModel"></textarea>
+  </mat-form-field>
     <mat-form-field>
-        <label>Lecturer</label>
+        <mat-label>Lecturer</mat-label>
       <textarea
         matInput
         name="lecturer"
@@ -20,20 +20,18 @@
         #content="ngModel"></textarea>
     </mat-form-field>
     <mat-form-field>
-        <label>Duration</label>
+        <mat-label>Duration</mat-label>
       <textarea
         matInput
-        rows="4"
         name="duration"
         ngModel
         required
         #content="ngModel"></textarea>
     </mat-form-field>
     <mat-form-field>
-      <label>Credits Worth</label>
+      <mat-label>Credits</mat-label>
     <textarea
       matInput
-      rows="4"
       name="worthCredits"
       ngModel
       required
@@ -41,7 +39,7 @@
   </mat-form-field>
     <button
       mat-raised-button
-      color="accent"
       type="submit">Save Module</button>
   </form>
 </mat-card>
+</div>

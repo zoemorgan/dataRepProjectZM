@@ -2,24 +2,25 @@
   <mat-expansion-panel [expanded]="true" >
     <mat-expansion-panel-header>
       <mat-panel-title>
-          <label>Module Name</label>
+          <mat-label>Module Name</mat-label>
         <h3> {{ module.name }} </h3>
       </mat-panel-title>
+    </mat-expansion-panel-header> 
       <mat-panel-description>
-          <label>Lecturer</label>
+          <mat-label>Lecturer</mat-label>
         <h3>{{ module.lecturer }}</h3>
       </mat-panel-description>
       <mat-panel-description>
-          <label>Module Name</label>
+          <mat-label>Module Name</mat-label>
         <h3> {{ module.duration }} </h3>
       </mat-panel-description>
       <mat-panel-description>
+          <mat-label>Credits</mat-label>
         <h3> {{ module.worthCredits }} </h3>
       </mat-panel-description>
-    </mat-expansion-panel-header> 
     <mat-action-row>
-      <button mat-button [routerLink]="['/modulesEdit', module._id]" color="primary">EDIT</button>
-      <button mat-button (click)="onDelete(module._id)" color="warn">DELETE</button>
+      <button mat-raised-button [routerLink]="['/modulesEdit', module._id]">EDIT</button>
+      <button mat-raised-button (click)="onDelete(module._id)" >DELETE</button>
     </mat-action-row>
   </mat-expansion-panel>
 </mat-accordion>

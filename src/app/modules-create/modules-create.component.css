@@ -2,3 +2,8 @@ mat-form-field,
 textarea {
   width: 100%;
 }
+
+.createModuleForm{
+  width: 70%;
+  margin: auto;
+}

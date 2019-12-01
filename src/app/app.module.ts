@@ -14,6 +14,7 @@ import {FormsModule} from '@angular/forms';
 import { TodoReadComponent } from './todo-read/todo-read.component';
 import { TodoCreateComponent } from './todo-create/todo-create.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
     ModulesCreateComponent,
     TodoReadComponent,
     TodoCreateComponent,
-    TodoEditComponent
+    TodoEditComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+
+.editTodoForm{
+  width: 70%;
+  margin: auto;
+}

@@ -1,3 +1,45 @@
-<p>
-  todo-edit works!
-</p>
+<div class="editTodoForm">
+<mat-card>
+  <form (submit)="onEditToDo(todoForm)" #todoForm="ngForm">
+    <mat-form-field>
+        <label> Task Name</label>
+        <textarea
+        matInput
+        name="name"
+        ngModel={{todo.name}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <label>Module</label>
+      <textarea
+        matInput
+        name="moduleName"
+        ngModel={{todo.moduleName}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+        <label>Due Date</label>
+      <textarea
+        matInput
+        name="dueDate"
+        ngModel={{todo.dueDate}}
+        required
+        #content="ngModel"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <label>Percentage Worth</label>
+    <textarea
+      matInput
+      name="worthPercentage"
+      ngModel={{todo.worthPercentage}}
+      required
+      #content="ngModel"></textarea>
+  </mat-form-field>
+    <button
+      mat-raised-button
+      type="submit">Edit To-Do Item</button>
+  </form>
+</mat-card>
+</div>

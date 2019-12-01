@@ -6,6 +6,7 @@ import {ModulesCreateComponent} from './modules-create/modules-create.component'
 import {TodoReadComponent} from './todo-read/todo-read.component';
 import {TodoEditComponent} from './todo-edit/todo-edit.component';
 import {TodoCreateComponent} from './todo-create/todo-create.component';
+import {HomePageComponent} from './home-page/home-page.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'todoCreate',
     component: TodoCreateComponent
+  },
+  {
+    path:'',
+    component: HomePageComponent
   }
 ];
 

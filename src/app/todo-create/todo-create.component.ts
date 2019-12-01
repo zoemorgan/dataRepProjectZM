@@ -15,7 +15,7 @@ export class TodoCreateComponent implements OnInit {
   MyModules: any =[];
 
   ngOnInit() {
-    //get module information from DB to bus used in module select drop down
+    //get module information from DB to be used in module select drop down
     this.moduleService.GetModuleInformation().subscribe((data) => {
       this.MyModules = data.modules;
       console.log(this.MyModules);

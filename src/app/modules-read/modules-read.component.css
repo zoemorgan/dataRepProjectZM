@@ -1,4 +1,6 @@
-mat-panel-title,
-textarea {
-  width: 100%;
+mat-expansion-panel, textarea{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 2%;
 }

@@ -1,15 +1,15 @@
+<div class="editModuleForm">
 <mat-card>
   <form (submit)="onEditModule(moduleForm)" #moduleForm="ngForm">
     <mat-form-field>
-        <label> Module Name</label>
-        <input
-          matInput
-          type="text"
-          name="name"
-          ngModel={{module.name}}
-          required
-          #name="ngModel">
-    </mat-form-field>
+      <label>Module Name</label>
+    <textarea
+      matInput
+      name="name"
+      ngModel={{module.name}}
+      required
+      #content="ngModel"></textarea>
+  </mat-form-field>
     <mat-form-field>
         <label>Lecturer</label>
       <textarea
@@ -23,17 +23,15 @@
         <label>Module Duration</label>
       <textarea
         matInput
-       rows="4"
         name="duration"
         ngModel={{module.duration}}
         required
         #content="ngModel"></textarea>
     </mat-form-field>
     <mat-form-field>
-      <label>Credits Worth</label>
+      <label>Credits</label>
     <textarea
       matInput
-     rows="4"
       name="worthCredits"
       ngModel={{module.worthCredits}}
       required
@@ -41,7 +39,7 @@
   </mat-form-field>
     <button
       mat-raised-button
-      color="accent"
-      type="submit">Edit Movie</button>
+      type="submit">Edit Module</button>
   </form>
 </mat-card>
+</div>
